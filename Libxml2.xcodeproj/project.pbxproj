@@ -10,6 +10,7 @@
 		55C649A31D0949070000B340 /* Libxml2.h in Headers */ = {isa = PBXBuildFile; fileRef = 55C649A21D0949070000B340 /* Libxml2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55C649AA1D0949070000B340 /* Libxml2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C6499F1D0949070000B340 /* Libxml2.framework */; };
 		55C649AF1D0949070000B340 /* Libxml2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C649AE1D0949070000B340 /* Libxml2Tests.swift */; };
+		55C649BA1D094A160000B340 /* Libxml2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C649B91D094A160000B340 /* Libxml2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		55C649A91D0949070000B340 /* Libxml2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Libxml2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C649AE1D0949070000B340 /* Libxml2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libxml2Tests.swift; sourceTree = "<group>"; };
 		55C649B01D0949070000B340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C649B91D094A160000B340 /* Libxml2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Libxml2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				55C649A21D0949070000B340 /* Libxml2.h */,
+				55C649B91D094A160000B340 /* Libxml2.swift */,
 				55C649A41D0949070000B340 /* Info.plist */,
 			);
 			path = Libxml2;
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C649BA1D094A160000B340 /* Libxml2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,32 +314,39 @@
 		55C649B41D0949070000B340 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"HEADER_SEARCH_PATHS[arch=*]" = "${SDKROOT}/usr/include/libxml2/";
 				INFOPLIST_FILE = Libxml2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hnw.Libxml2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "${SRCROOT}/Libxml2/CLibxml2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		55C649B51D0949070000B340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				"HEADER_SEARCH_PATHS[arch=*]" = "${SDKROOT}/usr/include/libxml2/";
 				INFOPLIST_FILE = Libxml2/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hnw.Libxml2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "${SRCROOT}/Libxml2/CLibxml2";
 			};
 			name = Release;
 		};
